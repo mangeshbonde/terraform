@@ -1,4 +1,4 @@
 resource "local_file" "example" {
-    filename = "${path.module}/hello.txt"
-    content  = "Hello, Terraform!"
+    filename = "/home/ec2-user/upward.txt"
+    content  = "Hello, Terraform!   From meee......"
 }
