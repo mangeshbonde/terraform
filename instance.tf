@@ -4,12 +4,11 @@ provider "aws" {
 
 
 resource "aws_instance" "example" {
+  for_each      = toset(["Server-1", "Server-2", "Server-3"])
   ami           = "ami-051a31ab2f4d498f5"
   instance_type = "t3.micro"
   key_name      = "mumbai-key"
-  count         = 3
-
   tags = {
-    Name = "web-server-${count.index+1}"
+    Name = each.key
   }
 }
