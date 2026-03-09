@@ -9,3 +9,7 @@ variable "instance-type" {
 variable "key-name" {
   default = "mumbai-key"
 }
+
+variable "security_group_ids" {
+  default = ["sg-064c5b219bd75b2fa"]
+}
