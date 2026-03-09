@@ -15,7 +15,7 @@ resource "aws_instance" "lasan" {
                 echo "<h1>Welcome to Lasana's Web Server</h1>" > /var/www/html/index.html
                 EOF
  
-                
+                #Here we are using user_data to install and start the httpd service on the EC2 instance and create a simple index.html file to display a welcome message when we access the web server.
   tags = {
     Name = "Lasana-Instance"
   }
