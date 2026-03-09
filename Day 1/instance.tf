@@ -7,7 +7,7 @@ resource "aws_instance" "lasan" {
   instance_type = var.instance-type
   key_name      = var.key-name
   vpc_security_group_ids = var.security_group_ids
-  user_data = <<- EOF
+  user_data = <<-EOF
                 #!/bin/bash
                 yum install httpd -y
                 systemctl start httpd
